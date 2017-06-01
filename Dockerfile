@@ -17,7 +17,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     postgresql-client \
     zip \
     curl \
-    git
+    git \
+    vim \
+    jed \
+    emacs24-nox
 
 # Yarn repo and key                                                                              
 RUN apt-get install curl
