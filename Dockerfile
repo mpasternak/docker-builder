@@ -17,7 +17,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     postgresql-client \
     zip \
     curl \
-    git
+    git \
+    telnet \
+    net-tools
 
 # Yarn repo and key                                                                              
 RUN apt-get install curl
