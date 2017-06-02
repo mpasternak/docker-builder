@@ -19,7 +19,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl \
     git \
     telnet \
-    net-tools
+    net-tools \
+    vim \
+    jed \
+    emacs24-nox
 
 # Yarn repo and key                                                                              
 RUN apt-get install curl
