@@ -29,7 +29,7 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq 
 
 RUN add-apt-repository -y ppa:jonathonf/python-3.6 && apt-get update -qq && \
      DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
-     python3.6
+     python3.6 python3.6-dev
 
 # Yarn repo and key                                                                              
 RUN apt-get install curl
