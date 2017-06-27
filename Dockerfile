@@ -5,7 +5,8 @@ LABEL version="0.1"
 LABEL description="Ubuntu 16.04 box for building Django sites. Includes PostgreSQL client, Yarn and Node 6"
 LABEL maintainer "michal.dtz@gmail.com"
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+    software-properties-common \
     build-essential \
     python-dev \
     python3-dev \
@@ -25,6 +26,10 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     emacs24-nox \
     xvfb \
     phantomjs
+
+RUN add-apt-repository -y ppa:jonathonf/python-3.6 && apt-get update -qq && \
+     DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+     python3.6
 
 # Yarn repo and key                                                                              
 RUN apt-get install curl
