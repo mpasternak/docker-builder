@@ -25,7 +25,8 @@ RUN apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq 
     jed \
     emacs24-nox \
     xvfb \
-    phantomjs
+    phantomjs \
+    gettext 
 
 RUN add-apt-repository -y ppa:jonathonf/python-3.6 && apt-get update -qq && \
      DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
